@@ -61,9 +61,9 @@ setup(
     # the `py_modules` argument instead as follows, which will expect a file
     # called `my_module.py` to exist:
     #
-    py_modules=["plugin"],
+    # py_modules=["my_module"],
     #
-    # packages=find_packages(),
+    packages=find_packages(),
 
     # This field lists other packages that your project depends on to run.
     # Any package you put here will be installed by pip when your project is
@@ -85,7 +85,7 @@ setup(
     # executes the function `main` from this package when invoked:
     entry_points={
         'bibo.plugins': [
-            'check=plugin:check',
+            'check=bibo_check:check',
         ],
     },
 )
